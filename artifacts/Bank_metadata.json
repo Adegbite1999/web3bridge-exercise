@@ -126,11 +126,11 @@
 	},
 	"sources": {
 		"Bank\\Bank.sol": {
-			"keccak256": "0x7159f46021387670cefa69b45e7345f39345f1f64f1164f6cb9173927ca34c16",
+			"keccak256": "0xa5cbe0779e1e1c88e68a5b2efbc948bd1020bbef2916dcf40f671c0eb79fad61",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://8c7ad7697a044ba3001aea97e2fd500759212644b6cafea022a32479dcf91830",
-				"dweb:/ipfs/Qmc5V9JRNoYRzjxZv6eS116UqE1GyrvbNQFL2SRHy4sff3"
+				"bzz-raw://238e4d8f132c406093eda85ba5218fe3e3ebaf7a41b3c30e1988ccb32c19904b",
+				"dweb:/ipfs/QmXoSSb3NnhJmnuBZHR7r5jbktPkTNzbNuhB87VC1AtjEc"
 			]
 		}
 	},

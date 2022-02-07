@@ -11,10 +11,6 @@
 				"type": "constructor"
 			},
 			{
-				"stateMutability": "payable",
-				"type": "fallback"
-			},
-			{
 				"inputs": [],
 				"name": "BreakPiggy",
 				"outputs": [],
@@ -40,10 +36,6 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
-			},
-			{
-				"stateMutability": "payable",
-				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -74,11 +66,11 @@
 	},
 	"sources": {
 		"PiggyBank\\PiggyBank.sol": {
-			"keccak256": "0x285418b4f39c81d656312f9359988702b17438b6546f948b30ddc510f6909dc1",
+			"keccak256": "0x59143687acf69ab28c970556958079f06bf0a20177c0795a22dfb7b73e3c3853",
 			"license": "CC-BY-SA-4.0",
 			"urls": [
-				"bzz-raw://1861dbc435880605ee09b499005ced276b6fff183fae4c07cfffcfa5665f127e",
-				"dweb:/ipfs/QmPCQVnwLNqr6si3W4WCsy5P8rCfL8Q89ay71WsPhYAxN1"
+				"bzz-raw://1bcfa9d8e32dae89c19478d69901ce47e0300318e6bc28cf6488181a759a17b1",
+				"dweb:/ipfs/QmW3u2AejNsCKFK96FHdJv9iKGcgP51VHaAq6YuvJShPGX"
 			]
 		}
 	},
