@@ -1,4 +1,3 @@
-
 // SPDX-License-Identifier: CC-BY-SA-4.0
 pragma solidity ^0.8.4;
 
@@ -38,10 +37,10 @@ contract DataBase{
     // @add to the struct
     function addToCitizens(address _addr, string memory _fatherName, string memory _motherName, uint _age, string memory _fullName, bool _passport) external onlyAdmin {
        require(BirthCertExist[_addr] == false);
-        bytes32  random = concat( _addr, _age);
-         bytes32  Nin = genNIN( _fatherName, _age);
-          bytes32  License = genLicense( _motherName, _age);
-           bytes32  Vc = genVc( _fullName, _age);
+       bytes32  random = concat( _addr, _age);
+        bytes32    Nin = genNIN( _fatherName, _age);
+        bytes32     License = genLicense( _motherName, _age);
+        bytes32      Vc = genVc( _fullName, _age);
     BirthCert storage citizen = BirthCertRecords[_fullName];
     citizen.addr = _addr;
     citizen.uniqueID = random;
@@ -54,7 +53,7 @@ contract DataBase{
     citizen.details.passport  =_passport;
     BirthCertExist[_addr] =true;
     }
-     function citizenssDatabase(string[] memory query) external view returns (BirthCert[] memory arr) {
+     function citizensDatabase(string[] memory query) external view returns (BirthCert[] memory arr) {
           arr = new BirthCert[](query.length);
          for(uint i=0; i < query.length; i++){
              arr[i] =  BirthCertRecords[query[i]];
@@ -62,16 +61,16 @@ contract DataBase{
      }
 
     function concat(address _address, uint _age) private view  returns (bytes32){
-        return  bytes32 (abi.encodePacked(_address,_age, block.timestamp));
+        return   keccak256(abi.encodePacked(_address,_age, block.timestamp));
     }
-        function genNIN(string memory _fatherName, uint _age) private view  returns (bytes32){
-        return  bytes32 (abi.encodePacked(_fatherName,_age, block.timestamp));
+        function genNIN(string memory _fatherName, uint _age) private view returns(bytes32){
+        return  keccak256(abi.encodePacked(_fatherName,_age, block.timestamp));
     }
         function genLicense(string memory _motherName, uint _age) private view  returns (bytes32){
-        return  bytes32 (abi.encodePacked(_motherName,_age, block.timestamp));
+        return  keccak256(abi.encodePacked(_motherName,_age, block.timestamp));
     }
         function genVc(string memory _fullName, uint _age) private view  returns (bytes32){
-        return  bytes32 (abi.encodePacked(_fullName,_age, block.timestamp));
+        return  keccak256(abi.encodePacked(_fullName,_age, block.timestamp));
     }
 
 
